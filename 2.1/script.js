@@ -1,4 +1,4 @@
-let pessoaEstudante = "euMesmo";
-let hasbilidadesPessoaEstudante = 10;
-
-console.log("sucesso");
+let student = "Luis Carlos";
+let studentSkills = 10;
+// Vou ter muito sucesso na programação!
+console.log("Sucesso!");
