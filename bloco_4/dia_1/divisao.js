@@ -1,3 +1,6 @@
+let a = 17;
+let b = 3;
+
 function modulo (a , b) {
   if (b === 0) {
     return 'Não é permitida divisão por zero.';
@@ -5,4 +8,4 @@ function modulo (a , b) {
   return a / b;
 }
 
-console.log(modulo(17, 3));
+console.log(modulo(a, b));
