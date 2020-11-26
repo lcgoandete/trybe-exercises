@@ -48,6 +48,23 @@ function maiorValor () {
       maiorValor = numbers[i];
     }
   }
-  console.log(maiorValor);  
+  console.log(maiorValor);
 }
-maiorValor();
+//maiorValor();
+
+function getImpar() {
+  let impar = 0;
+  for (const i in numbers) {
+    if (numbers[i] % 2 !== 0) {
+      impar += 1;
+    }
+  }
+
+  if (impar > 0) {
+    console.log(`Existem ${impar} números ímpares`);
+  
+  } else {
+    console.log(`Nenhum valor ímpar`);
+  }
+}
+getImpar();
