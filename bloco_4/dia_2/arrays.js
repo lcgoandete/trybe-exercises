@@ -1,11 +1,13 @@
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
+
 function percorrerArray() {
   for (const i in numbers) {
     console.log(numbers[i]);
   }
 }
 //percorrerArray();
+
 
 function somarValores() {
   let valorSomado = 0;
@@ -16,6 +18,7 @@ function somarValores() {
 }
 //somarValores();
 
+
 function calcularMedia() {
   let valorSomado = 0;
   for (const i in numbers) {
@@ -24,6 +27,7 @@ function calcularMedia() {
   console.log(valorSomado / numbers.length);
 }
 //calcularMedia();
+
 
 function maiorOuMenor() {
   let valorSomado = 0;
@@ -41,6 +45,7 @@ function maiorOuMenor() {
 }
 //maiorOuMenor();
 
+
 function maiorValor () {
   let maiorValor = 0;
   for (const i in numbers) {
@@ -51,6 +56,7 @@ function maiorValor () {
   console.log(maiorValor);
 }
 //maiorValor();
+
 
 function getImpar() {
   let impar = 0;
@@ -69,6 +75,7 @@ function getImpar() {
 }
 //getImpar();
 
+
 function getMenorValor () {
   let menorValor = 1000;
   for (const i in numbers) {
@@ -78,4 +85,14 @@ function getMenorValor () {
   }
   console.log(menorValor);
 }
-getMenorValor();
+//getMenorValor();
+
+
+function gerarArray() {
+  let atehVinteECinco = [];
+  for (let index = 1; index <= 25; index += 1) {
+    atehVinteECinco.push(index);
+  }
+  console.log(atehVinteECinco);
+}
+gerarArray();
