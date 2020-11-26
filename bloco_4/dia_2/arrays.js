@@ -5,4 +5,13 @@ function percorrerArray() {
     console.log(numbers[i]);
   }
 }
-percorrerArray();
+//percorrerArray();
+
+function somarValores() {
+  let valorSomado = 0;
+  for (const i in numbers) {
+    valorSomado = valorSomado + numbers[i];
+  }
+  console.log(valorSomado);
+}
+somarValores();
