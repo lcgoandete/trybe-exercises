@@ -67,4 +67,15 @@ function getImpar() {
     console.log(`Nenhum valor ímpar`);
   }
 }
-getImpar();
+//getImpar();
+
+function getMenorValor () {
+  let menorValor = 1000;
+  for (const i in numbers) {
+    if (menorValor > numbers[i]) {
+      menorValor = numbers[i];
+    }
+  }
+  console.log(menorValor);
+}
+getMenorValor();
