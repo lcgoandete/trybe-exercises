@@ -14,4 +14,13 @@ function somarValores() {
   }
   console.log(valorSomado);
 }
-somarValores();
+//somarValores();
+
+function calcularMedia() {
+  let valorSomado = 0;
+  for (const i in numbers) {
+    valorSomado = valorSomado + numbers[i];
+  }
+  console.log(valorSomado / numbers.length);
+}
+calcularMedia();
