@@ -39,4 +39,15 @@ function maiorOuMenor() {
     console.log('valor menor ou igual a 20');
   }
 }
-maiorOuMenor();
+//maiorOuMenor();
+
+function maiorValor () {
+  let maiorValor = 0;
+  for (const i in numbers) {
+    if (maiorValor < numbers[i]) {
+      maiorValor = numbers[i];
+    }
+  }
+  console.log(maiorValor);  
+}
+maiorValor();
