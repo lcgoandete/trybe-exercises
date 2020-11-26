@@ -95,4 +95,17 @@ function gerarArray() {
   }
   console.log(atehVinteECinco);
 }
-gerarArray();
+//gerarArray();
+
+
+function dividirTodosPorDois() {
+  let atehVinteECinco = [];
+  for (let index = 1; index <= 25; index += 1) {
+    atehVinteECinco.push(index);
+  }
+
+  for (const index in atehVinteECinco) {
+    console.log(atehVinteECinco[index] / 2);
+  }
+}
+dividirTodosPorDois();
