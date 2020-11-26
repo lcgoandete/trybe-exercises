@@ -16,7 +16,7 @@ function escolherPeca (pecaEscolhida) {
       return pecas[i] + ' -> ' + movimentos[i];
     } 
   }
-  return 'Erro - Peça inválida';
+  return 'ERRO - Peça inválida.';
 }
 
 console.log(escolherPeca('RAINHA'));

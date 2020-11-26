@@ -7,14 +7,14 @@ function compararTresNumeros (a, b, c) {
   
   if (typeof somaDosAngulos === 'number') {
     if (somaDosAngulos === 180) {
-      return 'true';
+      return true;
     
     } else if (somaDosAngulos !== 180) {
-      return 'false';
+      return false;
     } 
   
   } else {
-    return 'erro - angulos invalidos';
+    return 'ERRO - angulos inválidos';
   }
 }
 
