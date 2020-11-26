@@ -23,4 +23,20 @@ function calcularMedia() {
   }
   console.log(valorSomado / numbers.length);
 }
-calcularMedia();
+//calcularMedia();
+
+function maiorOuMenor() {
+  let valorSomado = 0;
+  for (const i in numbers) {
+    valorSomado = valorSomado + numbers[i];
+  }
+  
+  let maiorOuMenor = valorSomado / numbers.length;
+  if (maiorOuMenor > 20) {
+    console.log('valor maior que 20');
+  
+  } else {
+    console.log('valor menor ou igual a 20');
+  }
+}
+maiorOuMenor();
