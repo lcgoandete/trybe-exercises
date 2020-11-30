@@ -1,10 +1,12 @@
-let salarioBruto = 3000;
+let salarioBruto = 3500;
+
 
 function getSalarioLiquido() {
   let salarioBase = salarioBruto - getINSS(salarioBruto);
   let salarioLiquido = salarioBase - getIR(salarioBase);
   return salarioLiquido.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'}); // creditos para https://pt.stackoverflow.com/questions/181922/formatar-moeda-brasileira-em-javascript
 }
+  salarioBruto
 
 function getINSS(salarioBruto) {
   if (salarioBruto <= 1556.94) {
@@ -12,7 +14,7 @@ function getINSS(salarioBruto) {
   
   } else if (salarioBruto >= 1556.95 && salarioBruto <= 2594.92) {
     return salarioBruto / 100 * 9;
-  
+    
   } else if (salarioBruto >= 2594.93 && salarioBruto <= 5189.82) {
     return salarioBruto / 100 * 11;
   
@@ -20,6 +22,7 @@ function getINSS(salarioBruto) {
     return 570.88;
   }
 }
+
 
 function getIR(salarioBase) {
   if (salarioBase <= 1903.98) {
