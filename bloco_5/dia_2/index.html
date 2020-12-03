@@ -125,8 +125,12 @@
       addH33.className = 'description';
 
       //3 Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild()
-      let pai = document.getElementsByClassName("left-content")[0].parentNode;
+      const pai = document.getElementsByClassName("left-content")[0].parentNode;
       pai.removeChild(document.getElementsByClassName("left-content")[0]);
+
+      //4 Centralize o div criado no passo 6 (aquele que possui a classe right-content). Dica: para centralizar, basta configurar o margin-right: auto do div
+      document.querySelector(".right-content").style.marginRight = 'auto';
+      
     </script>
   </body>
 </html>
