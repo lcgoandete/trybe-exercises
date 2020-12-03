@@ -44,25 +44,38 @@
       }
       changeText();
       
+      
       function changeSquareColorToGreen() {
         document.getElementsByClassName('main-content')[0].style.backgroundColor = 'rgb(76,164,109)';
       }
       changeSquareColorToGreen();
+
 
       function changeSquareColorToWhite() {
         document.getElementsByClassName('center-content')[0].style.backgroundColor = '#FFFFFF';
       }
       changeSquareColorToWhite();
 
+
       function fixTagH1() {
         document.getElementsByTagName('h1')[0].innerHTML = 'Exercício 5.1 - JavaScripit';
       }
       fixTagH1();
 
+
       function ChangeTagPToCapitalLetter() {
         document.getElementsByTagName('p')[0].innerText = document.getElementsByTagName('p')[0].innerText.toUpperCase();
       }
       ChangeTagPToCapitalLetter();
+
+
+      function showContent() {
+        let tagP = document.getElementsByTagName('p');
+        for (const content of tagP) {
+          console.log(content.innerText);
+        }
+      }
+      showContent();
   </script>
 </body>
 </html>
