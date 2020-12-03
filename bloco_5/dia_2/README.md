@@ -2,6 +2,8 @@ O objetivo desses exercícios é colocar em prática o que você acabou de apren
 
 Para uma melhor organização, faça commits a cada tarefa concluída. Vamos aos exercícios:
 
+
+
 1 - Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 
 2 - Adicione a tag div com a classe main-content como filho da tag body ;
