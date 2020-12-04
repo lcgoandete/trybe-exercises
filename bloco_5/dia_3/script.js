@@ -1,5 +1,6 @@
 window.onload = function() {
   createCalendarDays();
+  createHolidayButton('Feriados');
   
 }
 
@@ -34,4 +35,14 @@ function createCalendarDays() {
     }
     days.appendChild(dayTemp);
   }
+}
+
+function createHolidayButton(holiday) {
+  let btnHoliday = document.createElement('button');
+  btnHoliday.id = 'btn-holiday';
+  btnHoliday.name = holiday;
+  btnHoliday.innerHTML = holiday;
+  
+  let buttonsContainer = document.querySelector('.buttons-container');
+  buttonsContainer.appendChild(btnHoliday); 
 }
