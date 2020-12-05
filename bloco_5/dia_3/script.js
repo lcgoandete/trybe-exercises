@@ -10,7 +10,7 @@ window.onload = () => {
   createLabel('green');
   selectTask();
   changeDayColor();
-  
+  addAppointments();
 }
 
 function createCalendarDays() {
@@ -61,7 +61,7 @@ function changeHolidayBackgroundColor() {
   
   btnHoliday.addEventListener('click', () => {
     let holiday = document.querySelectorAll('.holiday');
-    
+
     for (let index = 0; index < holiday.length; index += 1) {
       if (holiday[index].style.backgroundColor === 'green') {
         holiday[index].style.backgroundColor = 'rgb(238,238,238)';
@@ -86,7 +86,7 @@ function changeTextToFriday() {
   
   btnFriday.addEventListener('click', () => {
     let fridays = document.querySelectorAll('.friday');
-    
+
     for (let index = 0; index < fridays.length; index += 1) {
       let friday = fridays[index];
       
@@ -166,10 +166,10 @@ function selectTask() {
 function changeDayColor() {
   let days = document.querySelectorAll('.day');
   let labelColor = document.querySelector('.task').style.backgroundColor; 
-  
+
   for (let index = 0; index < days.length; index += 1) {
     let day = days[index];
-    
+
     day.addEventListener('click', () => {
       if (day.style.color !== labelColor) {
         day.style.color = labelColor;
@@ -177,5 +177,33 @@ function changeDayColor() {
         day.style.color = 'rgb(119, 119, 119)';
       }
     });
+  }
+}
+
+function addAppointments() {
+  let btnAddAppointments = document.querySelector('#btn-add');
+  btnAddAppointments.addEventListener('click', () => {
+    saveAppointments();
+  });
+
+  let keyPressAddAppointments = document.querySelector('#task-input');
+  keyPressAddAppointments.addEventListener('keyup', (event) => {
+   if (event.key === 'Enter') {
+    saveAppointments() ;
+   }
+  });
+
+  function saveAppointments() {
+    let appointments = document.querySelector('#task-input').value;
+      
+    if (appointments === '') {
+      alert('ERRO - Não pode ser inserido um compromisso vazio!');
+    } else {
+      let appointmentsListItem = document.createElement('li');
+      appointmentsListItem.innerText = appointments;
+
+      let myAppointments = document.querySelector('.task-list');
+      myAppointments.appendChild(appointmentsListItem);
+    }
   }
 }
