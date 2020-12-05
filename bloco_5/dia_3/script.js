@@ -7,8 +7,9 @@ window.onload = () => {
   zoomIn();
   zoomOut();
   tasks('codar');
-  createLabel('cyan');
+  createLabel('green');
   selectTask();
+  changeDayColor();
   
 }
 
@@ -62,10 +63,10 @@ function changeHolidayBackgroundColor() {
     let holiday = document.querySelectorAll('.holiday');
     
     for (let index = 0; index < holiday.length; index += 1) {
-      if (holiday[index].style.backgroundColor === 'cyan') {
+      if (holiday[index].style.backgroundColor === 'green') {
         holiday[index].style.backgroundColor = 'rgb(238,238,238)';
       } else {
-        holiday[index].style.backgroundColor = 'cyan';
+        holiday[index].style.backgroundColor = 'green';
       }
     }
   });
@@ -160,4 +161,21 @@ function selectTask() {
       label.className = 'task';
     }
   });
+}
+
+function changeDayColor() {
+  let days = document.querySelectorAll('.day');
+  let labelColor = document.querySelector('.task').style.backgroundColor; 
+  
+  for (let index = 0; index < days.length; index += 1) {
+    let day = days[index];
+    
+    day.addEventListener('click', () => {
+      if (day.style.color !== labelColor) {
+        day.style.color = labelColor;
+      } else {
+        day.style.color = 'rgb(119, 119, 119)';
+      }
+    });
+  }
 }
