@@ -2,6 +2,7 @@ window.onload = () => {
   createCalendarDays();
   createHolidayButton('Feriados');
   changeHolidayBackgroundColor();
+  createfridayButton('Sexta-feira');
   
 }
 
@@ -62,4 +63,13 @@ function changeHolidayBackgroundColor() {
       }
     }
   });
+}
+
+function createfridayButton(friday) {
+  let btnFriday = document.createElement('button');
+  btnFriday.id = 'btn-friday';
+  btnFriday.innerHTML = friday;
+  
+  let buttonsContainer = document.querySelector('.buttons-container');
+  buttonsContainer.appendChild(btnFriday); 
 }
