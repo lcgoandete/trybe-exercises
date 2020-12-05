@@ -109,9 +109,23 @@ function changeTextToFriday() {
 }
 
 function zoomIn() {
+  let zoomIn = document.querySelector('#days');
+  zoomIn.addEventListener('mouseover', (event) => {
 
+  if (event.target.localName === 'li') {
+     let zoomDay = event.target;
+     zoomDay.style.fontSize = '35px'
+  }
+  });
 }
 
 function zoomOut() {
-  
+  let zoomOut = document.querySelector('#days');
+  zoomOut.addEventListener('mouseout', (event) => {
+
+  if (event.target.localName === 'li') {
+    let zoomDay = event.target;
+    zoomDay.style.fontSize = '20px'
+  }
+  });
 }
