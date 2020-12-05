@@ -1,6 +1,7 @@
-window.onload = function() {
+window.onload = () => {
   createCalendarDays();
   createHolidayButton('Feriados');
+  changeHolidayBackgroundColor();
   
 }
 
@@ -45,4 +46,20 @@ function createHolidayButton(holiday) {
   
   let buttonsContainer = document.querySelector('.buttons-container');
   buttonsContainer.appendChild(btnHoliday); 
+}
+
+function changeHolidayBackgroundColor() {
+  let btnHoliday = document.querySelector('#btn-holiday');
+  
+  btnHoliday.addEventListener('click', () => {
+    let holiday = document.querySelectorAll('.holiday');
+    
+    for (let index = 0; index < holiday.length; index += 1) {
+      if (holiday[index].style.backgroundColor === 'cyan') {
+        holiday[index].style.backgroundColor = 'rgb(238,238,238)';
+      } else {
+        holiday[index].style.backgroundColor = 'cyan';
+      }
+    }
+  });
 }
