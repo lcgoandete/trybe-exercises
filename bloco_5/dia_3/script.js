@@ -3,6 +3,7 @@ window.onload = () => {
   createHolidayButton('Feriados');
   changeHolidayBackgroundColor();
   createfridayButton('Sexta-feira');
+  changeTextToFriday();
   
 }
 
@@ -72,4 +73,30 @@ function createfridayButton(friday) {
   
   let buttonsContainer = document.querySelector('.buttons-container');
   buttonsContainer.appendChild(btnFriday); 
+}
+
+function changeTextToFriday() {
+  let btnFriday = document.querySelector('#btn-friday');
+  
+  btnFriday.addEventListener('click', () => {
+    let fridays = document.querySelectorAll('.friday');
+    
+    for (let index = 0; index < fridays.length; index += 1) {
+      let friday = fridays[index];
+      
+      if (friday.innerText !== 'Sexta-feira') {
+        friday.innerText = 'Sexta-feira';
+      } else {
+        if (friday.previousElementSibling.innerText === '3') {
+          friday.innerText = '4';    
+        } else if (friday.previousElementSibling.innerText === '10') {
+          friday.innerText = '11';    
+        } else if (friday.previousElementSibling.innerText === '17') {
+          friday.innerText = '18';    
+        } else if (friday.previousElementSibling.innerText === '24') {
+          friday.innerText = '25';    
+        }
+      }
+    }
+  });
 }
