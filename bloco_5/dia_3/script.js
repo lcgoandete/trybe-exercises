@@ -7,6 +7,7 @@ window.onload = () => {
   zoomIn();
   zoomOut();
   tasks('codar');
+  createLabel('cyan');
   
 }
 
@@ -137,4 +138,12 @@ function tasks(tasks) {
 
   let myTasks = document.querySelector('.my-tasks');
   myTasks.appendChild(task);
+}
+
+function createLabel(colorLabel) {
+  let label = document.createElement('div');
+  label.style.backgroundColor = colorLabel;
+
+  let myTasks = document.querySelector('.my-tasks');
+  myTasks.appendChild(label);
 }
