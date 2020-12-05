@@ -8,6 +8,7 @@ window.onload = () => {
   zoomOut();
   tasks('codar');
   createLabel('cyan');
+  selectTask();
   
 }
 
@@ -142,8 +143,21 @@ function tasks(tasks) {
 
 function createLabel(colorLabel) {
   let label = document.createElement('div');
+  label.className = 'task';
   label.style.backgroundColor = colorLabel;
 
   let myTasks = document.querySelector('.my-tasks');
   myTasks.appendChild(label);
+}
+
+function selectTask() {
+  let label = document.querySelector('.my-tasks > div');
+  label.addEventListener('click', () => {
+    
+    if (label.className === 'task') {
+      label.className = 'task selected';
+    } else {
+      label.className = 'task';
+    }
+  });
 }
