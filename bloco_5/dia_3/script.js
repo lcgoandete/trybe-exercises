@@ -6,6 +6,7 @@ window.onload = () => {
   changeTextToFriday();
   zoomIn();
   zoomOut();
+  tasks('codar');
   
 }
 
@@ -128,4 +129,12 @@ function zoomOut() {
     zoomDay.style.fontSize = '20px'
   }
   });
+}
+
+function tasks(tasks) {
+  let task = document.createElement('span');
+  task.innerText = 'Terminar os exercícios que ficaram para trás.';
+
+  let myTasks = document.querySelector('.my-tasks');
+  myTasks.appendChild(task);
 }
