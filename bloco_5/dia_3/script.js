@@ -4,6 +4,8 @@ window.onload = () => {
   changeHolidayBackgroundColor();
   createfridayButton('Sexta-feira');
   changeTextToFriday();
+  zoomIn();
+  zoomOut();
   
 }
 
@@ -87,16 +89,29 @@ function changeTextToFriday() {
       if (friday.innerText !== 'Sexta-feira') {
         friday.innerText = 'Sexta-feira';
       } else {
-        if (friday.previousElementSibling.innerText === '3') {
-          friday.innerText = '4';    
-        } else if (friday.previousElementSibling.innerText === '10') {
-          friday.innerText = '11';    
-        } else if (friday.previousElementSibling.innerText === '17') {
-          friday.innerText = '18';    
-        } else if (friday.previousElementSibling.innerText === '24') {
-          friday.innerText = '25';    
+        switch (friday.previousElementSibling.innerText) {
+          case '3':
+            friday.innerText = '4';
+            break;
+          case '10':
+            friday.innerText = '11';
+            break;
+          case '17':
+            friday.innerText = '18';
+            break;
+          case '24':
+            friday.innerText = '25';
+            break;
         }
       }
     }
   });
+}
+
+function zoomIn() {
+
+}
+
+function zoomOut() {
+  
 }
