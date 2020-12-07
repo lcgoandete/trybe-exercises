@@ -16,12 +16,12 @@ window.onload = () => {
 function createCalendarDays() {
   const dezDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
   const days = document.querySelector('#days');
-  
+
   for (const day of dezDaysList) {
     let dayTemp = document.createElement('li');
     dayTemp.innerText = day;
     dayTemp.className = 'day';
-    
+
     switch (day) {
       case 4:
         dayTemp.className = 'day friday';
@@ -182,28 +182,27 @@ function changeDayColor() {
 
 function addAppointments() {
   let btnAddAppointments = document.querySelector('#btn-add');
-  btnAddAppointments.addEventListener('click', () => {
-    saveAppointments();
-  });
+  btnAddAppointments.addEventListener('click', () => addAppointments());
 
   let keyPressAddAppointments = document.querySelector('#task-input');
   keyPressAddAppointments.addEventListener('keyup', (event) => {
    if (event.key === 'Enter') {
-    saveAppointments() ;
+    addAppointments() ;
    }
   });
 
-  function saveAppointments() {
-    let appointments = document.querySelector('#task-input').value;
-      
-    if (appointments === '') {
+  function addAppointments() {
+    let appointments = document.querySelector('#task-input');
+
+    if (appointments.value === '') {
       alert('ERRO - Não pode ser inserido um compromisso vazio!');
     } else {
       let appointmentsListItem = document.createElement('li');
-      appointmentsListItem.innerText = appointments;
+      appointmentsListItem.innerText = appointments.value;
 
       let myAppointments = document.querySelector('.task-list');
       myAppointments.appendChild(appointmentsListItem);
+      appointments.value = '';
     }
   }
 }
