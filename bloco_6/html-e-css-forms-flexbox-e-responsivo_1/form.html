@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>html-e-css-forms-flexbox-e-responsivo_1</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>Dados Pessoais</legend>
+
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" maxlength="40" required>
+
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" name="email" maxlength="50" required>
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" maxlength="11" required>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco" maxlength="200" required>
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" maxlength="28" required>
+
+      <label for="estado">Estado:</label>
+      <select name="estado" id="estado" required>
+        <option>Selecione</option>
+      </select>
+
+      <label for="casa">Casa</label>
+      <input type="radio" id="casa" name="tipo" value="" required>
+      
+      <label for="apartamento">Apartamento</label>
+      <input type="radio" id="apartamento" name="tipo" required>
+    </fieldset>
+
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
