@@ -37,6 +37,23 @@
       <input type="radio" id="apartamento" name="tipo" required>
     </fieldset>
 
+    <fieldset>
+      <legend>Último Emprego</legend>
+
+      <label for="resumo-curiculo">Resumo do Currículo:</label>
+      <input type="textarea" id="resumo-curiculo" name="resumo-curiculo" maxlength="1000" required>
+
+      <label for="cargo">Cargo:</label>
+      <input type="text" id="cargo" name="cargo" maxlength="40" required>
+
+      <label for="descricao-cargo">Descrição do Cargo:</label>
+      <input type="text" id="descricao-cargo" name="descricao-cargo" maxlength="500" required>
+
+      <label for="data-inicio">Data de início:</label>
+      <input type="text" id="data-inicio" name="data-inicio" required>
+    </fieldset>
+
+    <button type="submit" id="btn-enviar">Enviar</button>
   </form>
 
   <script src="script.js"></script>

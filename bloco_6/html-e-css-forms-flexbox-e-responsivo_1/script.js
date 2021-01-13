@@ -8,3 +8,19 @@ for (const estado of estados) {
   uf.appendChild(option);
 }
 
+function verificarData() {
+  let data = document.querySelector('#data-inicio').value
+  
+}
+
+document.querySelector("#btn-enviar").addEventListener("click", function(event) {
+  event.preventDefault();
+});
+
+
+
+// Verificar o formato da data dd/mm/aaaa .
+// O dia deve ser > 0 e <= 31.
+// O mês deve ser > 0 e <= 12.
+// O ano não pode ser negativo.
+// Caso alguma das condições for inválida no momento do envio do formulário, exibir mensagem de erro contextualizada.
