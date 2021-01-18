@@ -63,16 +63,20 @@ const books = [
   },
 ];
 
-const expectedResult = true
+const expectedResult = false;
 
-function someBookWasReleaseOnThe80s() {
-  let result;
-  books.forEach(value => {
-    if ((value.releaseYear > 1979) || ((value.releaseYear < 1990))){
-      result = true;
-    }
+function authorUnique() {
+  let result = true;
+  books.forEach(book1 => {
+    books.forEach(book2 => {
+      if (book1.id !== book2.id) {
+        if (book1.author.birthYear === book2.author.birthYear) {
+          result = false;
+        }
+      }
+    });
   });
   return result;
 }
 
-assert.strictEqual(someBookWasReleaseOnThe80s(), expectedResult);
+assert.strictEqual(authorUnique(), expectedResult);
